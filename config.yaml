@@ -1,6 +1,6 @@
 name: Wireguard
 description: Apply wireguard config
-version: 1.0.0
+version: 1.0.1
 slug: wireguard
 init: false
 arch:

@@ -5,7 +5,7 @@ STAYUP=$(bashio::config 'Stay_up')
 
 CONFIG=/data/wireguard/wg0.conf
 
-[ -f $CONFIG ] && wg-quick up $CONFIG
+[ -f $CONFIG ] && wg-quick up $CONFIG || true
 
 if [ "$STAYUP" != "true" ]; then
   /run/s6/basedir/bin/halt
