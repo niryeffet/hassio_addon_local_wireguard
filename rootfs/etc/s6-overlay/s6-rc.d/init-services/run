@@ -1,0 +1,14 @@
+#!/command/with-contenv bashio
+# shellcheck shell=bash
+
+STAYUP=$(bashio::config 'Stay_up')
+
+CONFIG=/data/wireguard/wg0.conf
+
+[ -f $CONFIG ] && wg-quick up $CONFIG
+
+if [ "$STAYUP" != "true" ]; then
+  /run/s6/basedir/bin/halt
+else
+  true
+fi

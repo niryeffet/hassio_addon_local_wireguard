@@ -1,0 +1,5 @@
+---
+configuration:
+  Stay_up:
+    name: Stay Up
+    description: When Stay up is turned on, you can use docker shell to create/edit the rules files and stopping the addon will tear down wireguard interfaces. When Stay up is turned off, the addon will apply the wireguard config and exit without tearing down interfaces.

@@ -1,0 +1,10 @@
+#!/command/with-contenv bashio
+# shellcheck shell=bash
+
+STAYUP=$(bashio::config 'Stay_up')
+CONFIG=/data/wireguard/wg0.conf
+                          
+if [ "$STAYUP" == "true" ]; then
+  wg-quick down $CONFIG
+fi
+true
