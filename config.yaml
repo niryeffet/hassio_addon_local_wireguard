@@ -1,6 +1,6 @@
 name: Wireguard
 description: Apply wireguard config
-version: 1.0.2
+version: 1.0.3
 slug: wireguard
 init: false
 arch:
@@ -12,6 +12,8 @@ arch:
 host_network: true
 privileged:
   - NET_ADMIN
+devices:
+  - /dev/net/tun
 options:
   Stay_up: true
 schema:
